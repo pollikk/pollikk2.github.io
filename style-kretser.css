@@ -1,0 +1,408 @@
+/* Setter standarverdi på siden for margin og padding til 0 */
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+/* Setter bakgrunnsfage på innholdet i "body" */
+body{
+background-color: darkslategray;
+}
+/* Setter standarverdier til innholdet i bryterpanelet */
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+        text-decoration: none;
+}
+/* Setter bakgrunnsbilde samt tekst plassering for banner området */
+.banner {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url(images/komponenter/banner1.jpg) no-repeat center center fixed;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-areas:
+        ". tekst-banner . ."
+    ;
+}
+/* Styling av teksten i banneren */
+.tekst-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    max-width: 800px;
+    line-height: 1.4;
+    color: white;
+    grid-area: tekst-banner;
+}
+/* posisjonering av bryterpanel */
+.bryterpanel {
+    z-index: 99;
+    margin: 0 25px 0 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    top: 0;
+}
+/* Posisjonering og styling av knapper på bryterpanel */
+.button1 {
+    /*størrelse og posisjonering på alle knapper*/
+    margin-left: 20px;
+    display: flex;
+    padding: 2px;
+    width: 150px;
+    justify-content: center;
+    border: solid 2px transparent;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 1s;
+}
+/* hover effekt på knapper i bryterpanel*/
+.button1:hover {
+    transform: scale(1.2);
+    border: solid 2px darkblue;
+}
+
+
+/* setter container til grid type for å kunne plassere de forskjellige områdene  */
+.container {
+    display: grid;
+    grid-template-areas:
+        "tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp"
+        "area1 area1 area1 area1 area1"
+        "resistans-overskrift . . . dc-overskrift"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area5 area5 area5 area5 area5"
+    ;
+}
+/*  Styling av overskrift på siden*/
+.area1 {
+    background-color: rgb(39, 89, 89);
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    grid-area: area1;
+    min-height: 50px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+/* Styling av overskrift over venstre side av første side */
+.resistans-overskrift{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-bottom: solid black 1px;
+    grid-area: resistans-overskrift;
+}
+/*  Styling av overskrift over Høyre side av første side*/
+.dc-overskrift{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-bottom: solid black 1px;
+    grid-area: dc-overskrift;
+}
+
+.area2-container{               /*Grid oppsett for area2*/
+    margin: 0 0 0 0;
+    display: grid;
+    min-width: 300px;               /*setter minimum størrelse på area2 innholdet til 300px*/
+    grid-area: area2;
+    grid-template-areas:
+    "area2-1"
+    "area2-2"
+    "area2-3"
+    ;
+}
+.area2-1{                               /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-1;
+    border: solid transparent 2px ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#b1-1{
+    position: absolute;
+    height: 20%;
+    max-width: 15%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+#b1-1:hover {                    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, 10%);
+    z-index: 999999;
+}
+.area2-2 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-2;
+    border: solid transparent 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#b1-2 {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#b1-2:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, -10%);
+    z-index: 999999;
+}
+.area2-3 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-3;
+    border: solid transparent 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#b1-3 {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#b1-3:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, -10%);
+    z-index: 999999;
+}
+
+.area3-container {                            /*Hovedinnhold container*/
+    margin: 0 5% 0 5%;
+    display: grid;
+    height: fit-content;
+    min-height: 800px;
+    justify-content: center;
+    grid-area: area3-container;
+    background-color: white;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    border: solid 2px black;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.7);
+    grid-template-areas:
+    "area3-1"
+    "area3-2"
+    "area3-2"
+    "area3-2"
+    "area3-2"
+    "area3-2"
+    "area3-2"
+    "area3-3"
+    "area3-4"
+    ;
+}
+.area3-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 35px;
+}
+.area3-2 {
+    padding: 3%;
+    display: flex;
+    height: fit-content;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+#para3-2{
+    margin-top: -4%; /*Setter innholdstekst nærmere overskrift*/
+    align-items: start;
+    justify-content: start;
+    font-size: 20px;
+    height: fit-content;
+    flex: 1 1 200px;
+}
+.area3-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 35px;
+}
+.area3-4 {
+        padding: 3%;
+        display: flex;
+        height: fit-content;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+}
+#para3-4{
+    margin-top: -3%;
+        /*Setter innholdstekst nærmere overskrift*/
+        align-items: start;
+        justify-content: start;
+        font-size: 20px;
+        height: fit-content;
+        flex: 1 1 200px;
+    
+}
+.area4-container{
+    display: grid;
+    min-width: 300px; /*                setter min bredde for at ikke hovedinnholde skal streche over bilder på siden*/
+    grid-area: area4;
+    grid-template-areas:
+    "area4-1"
+    "area4-2"
+    "area4-3"
+    ;
+}
+.area4-1 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-1;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#b2-1 {
+    position: absolute;
+    height: 20%;
+    max-width: 15%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#b2-1:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+.area4-2 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-2;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#b2-2 {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#b2-2:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+
+.area4-3 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-3;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#b2-3 {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#b2-3:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+.area5{ /*                                              Avskille fra side 1 til side 2*/
+    margin: 5% 5% 5% 5%;
+    background-color: black;
+    grid-area: area5;
+    min-height: 0.1px;
+    max-height: 14px;
+}
+/*                                                          Detaljer avsluttende linje*/
+
+.detaljer-container{
+    display: grid;
+    min-height: 70px;
+    background-color: rgb(114, 144, 144);
+        grid-template-areas: 
+    "d-1 d-2 d-3 d-4"
+    "d-1 d-2 d-3 d-4"
+    "d-1 d-2 d-3 d-4"
+    "d-1 d-2 d-3 d-4"
+    ;
+}
+
+.d-1{
+    display: flex;
+    grid-area: d-1;
+    align-items: end;
+    justify-content: start;
+}
+.d-2 {
+    grid-area: d-2;
+}
+.d-3 {
+    grid-area: d-3;
+}
+.d-4 {
+    margin-right: 15px;
+    display: flex;
+    grid-area: d-4;
+    align-items: end;
+    justify-content: end;
+}

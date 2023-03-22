@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-komp-2.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--   Link til prelaget javascript fil for å kunne implimentere fade effekt  -->
+</head>
+
+<body> 
+    <div class="area1"><h1>Komponenter</h1></div><!--   Lager overskrift  -->
+    <div class="bryterpanel"><!--  Sette opp container for å inneholde knappene til bryterpanelet   -->
+        <a href="index.html"><span class="button1">Hjem</span></a><!--  link definert som knapp med link til hver enkelt side på nettsiden  -->
+        <a href="maleinstrument.html"><span class="button1">Måleinstrument</span></a>
+        <a href="Kretser.html"><span class="button1">Kretsskjemaer</span></a>
+        <a href="komponenter-2.html"><span class="button1">Komponenter</span></a>
+        <a href="oppsett.html"><span class="button1">Programmering</span></a>
+        <a href="oppbyggning.html"><span class="button1">Arbeidsprosess</span></a>
+    </div>
+           
+           <div class="banner">area-banner<!--  lager området hvor bakgrunn kan plasseres for å lage et bilde på toppen av siden   -->
+            <!--   Setter tekst på insiden av banneren  -->
+                <div class="tekst-banner">Elektroniske komponenter er grunnleggende byggeklosser i enhver elektronisk krets. De inkluderer elementer som
+                motstander, kondensatorer, dioder, transistorer og mikrokontrollere. Disse komponentene utfører spesifikke funksjoner i
+                en krets og kan kombineres på forskjellige måter for å oppnå ønsket funksjonalitet. Det er blitt brukt en rekke elektroniske komponenter på dette arbeidsoppdraget, og under er det listet de forskjellige komponentene produktet inneholder.</div>
+           </div>
+    <div class="container">
+
+            <div class="hovedinnhold"><!--  Setter opp området for hovedinnhold   -->
+                <div class="area2-container"><!--  Setter container på insiden av hovedinnholdet for å kunne style det seperat fra hovedinnholdet   -->
+                    <br>
+                    <img src="images/komponenter/diode.PNG" id="bilde-1"><!--    Setter inn bilde med egen id for å kunne style det seperat fra containerene -->
+                    <p id="ov1"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Diode</p><!-- prelaget javascript fade effekt på overskrifter    -->
+                    <p class="tekst-1">En diode er en elektronisk komponent som lar strøm flyte i en retning, men hindrer strøm i å flyte i den motsatte
+                    retningen. Dioder brukes i elektroniske kretser for å rette og stabilisere strøm, for å beskytte mot omvendt polaritet
+                    og for å generere pulser og oscillasjoner.</p>
+
+                    <img src="images/komponenter/kondensator.PNG" id="bilde-2">
+                    
+                    <p1 class="tekst-2"><p id="ov2"data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">Kondensator</p>En kondensator er en elektrisk komponent som kan lagre elektrisk ladning og frigjøre den når den er tilkoblet en krets.
+                    Kondensatorer brukes til filtrering, avstemming, timing og mange andre applikasjoner i elektronikk og elektroteknikk.</p>
+                    
+                    <img src="images/komponenter/spole.PNG" id="bilde-3">
+                    <p class="tekst-3"><p id="ov3"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Spole</p>En spole er en elektrisk komponent som består av en ledning som er viklet rundt en sylinderformet eller annen form for
+                    kjerne. Spoler brukes ofte i kretser til å lagre energi, filtrere signaler, endre impedans og produsere
+                    elektromagnetiske felt.</p>
+
+                    <img src="images/komponenter/tyristor.PNG" id="bilde-2">
+                    <p class="tekst-2"><p id="ov2"data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">Tyristor</p>En tyristor er en halvleder som fungerer som en bryter eller en kraftkontrollenhet i elektroniske kretser. Den kan
+                    fungere som en enveis strømbryter og kan tåle høye strøm- og spenningsnivåer. Tyristoren består av fire lag av
+                    halvledermateriale og kan slås på ved å sende en positiv puls til den tredje elektroden, eller gate. Tyristoren brukes
+                    vanligvis i AC- og DC-kraftkretser, dimmerkontroller, belysningsutstyr, motorstyring og likerettere.</p>
+
+                    <img src="images/komponenter/termistor.PNG" id="bilde-3">
+                    <p class="tekst-3"><p id="ov3"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Termistor</p>En termistor er en type temperatursensor som endrer motstanden når temperaturen endres. Den består av en keramisk eller
+                    polymerisk halvleder som er dopet for å ha en høyere resistivitet enn vanlige ledere. Når temperaturen øker, reduseres
+                    resistansen i termistoren, og når temperaturen synker, øker resistansen. Dette gjør termistoren til en effektiv sensor
+                    for å måle temperaturen i ulike applikasjoner, som for eksempel i hvitevarer, biler og medisinsk utstyr. Termistorer kan
+                    være negativ temperaturkoeffisient (NTC) eller positiv temperaturkoeffisient (PTC), avhengig av hvordan resistansen
+                    endrer seg med temperaturen.</p>
+
+                    <img src="images/komponenter/buzzer.PNG" id="bilde-2">
+                    <p class="tekst-2"><p id="ov2"data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">Piezoelektrisk passiv buzzer</p>Piezoelektrisk passiv buzzer er en type buzzer som bruker en piezoelektrisk keramisk plate til å produsere lyd når den
+                    utsettes for elektrisk spenning. Den krever ingen ekstern oscillator, og er ofte brukt i elektroniske kretser som enkel
+                    varsling, alarmer eller lydsignaler.</p>
+
+                    <img src="images/komponenter/kretskort.PNG" id="bilde-3">
+                    <p class="tekst-3"><p id="ov3"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Kretskort</p>Kretskort, også kjent som PCB (Printed Circuit Board), er en flat plate av isolerende materiale som har kobberbaner og
+                    komponenter montert på overflaten. Kretskort brukes til å koble elektroniske komponenter sammen og lage komplekse
+                    kretser i elektroniske apparater.</p>
+
+                    <img src="images/komponenter/resistor.PNG" id="bilde-2">
+                    <p class="tekst-2"><p id="ov2"data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">Resistor</p>En resistor er en elektrisk komponent som brukes til å begrense strømmen i en krets. Den har en spesifikk elektrisk
+                    motstand som måles i ohm. Resistoren kan være laget av forskjellige materialer, inkludert karbonfilm, metallfilm og
+                    keramikk. Motstanden til en resistor avhenger av dens fysiske egenskaper, inkludert lengde, bredde og tykkelse.
+                    Resistorene brukes i en rekke applikasjoner, inkludert kretser for belysning, motorstyring og datamaskiner.</p>
+
+                    <img src="images/komponenter/potensiometer.PNG" id="bilde-3">
+                    <p class="tekst-3"><p id="ov3"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Potensiometer</p>Potensiometer er en variabel motstand som brukes til å justere strøm eller spenning i en krets ved å endre motstanden.
+                    Potensiometere kan være lineære eller logaritmiske og finnes i ulike størrelser og typer, inkludert roterende, skyve- og
+                    trimpotensiometere.</p>
+
+                    <img src="images/komponenter/trykk-knapp.PNG" id="bilde-2">
+                    <p class="tekst-2"><p id="ov2"data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">Impulsbryter</p>En impulsbryter er en bryter som aktiveres når den trykkes ned og slippes. Impulsbrytere brukes ofte i elektriske
+                    kretser for å gi midlertidige eller momentane signaler til systemer eller enheter, for eksempel å starte en motor eller
+                    åpne en dør. Impulsbrytere kan ha forskjellige utforminger og størrelser, og kan være normalt åpne eller normalt lukkede
+                    avhengig av bruksområdet. De er vanlige i både industrielle og forbrukerapplikasjoner, og finnes i alt fra
+                    fjernkontroller til industrielle styringspaneler.</p>
+
+                    <img src="images/komponenter/målepinner.PNG" id="bilde-3">
+                    <p class="tekst-3"><p id="ov3"data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Målepinner</p>Målepinner, også kjent som testprober, er små metallstenger med en spiss ende som brukes til å måle elektriske
+                    egenskaper i en krets. De kan kobles til et multimeter eller annet måleinstrument for å måle spenning, strøm eller
+                    motstand. Målepinner kan ha isolerte eller ikke-isolerte håndtak og kan være utstyrt med ulike typer sonder, for
+                    eksempel krok, spiss eller krokodilleklemme. Målepinner er vanlige verktøy i elektroindustrien og brukes ofte i
+                    feilsøking og reparasjon av elektriske systemer og apparater.</p>
+
+                    <img src="images/komponenter/esp32.PNG" id="bilde-2">
+                    <p class="tekst-2">
+                    <p id="ov2" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">ESP-32</p>ESP32 er en system-on-chip (SoC) som kombinerer en 32-biters mikrokontroller med Wi-Fi og Bluetooth-tilkobling. ESP32 er
+                    vanligvis brukt i IoT-prosjekter, og kan programmeres med Arduino IDE eller MicroPython.</p>
+
+                    <img src="images/komponenter/opamp.PNG" id="bilde-3">
+                    <p class="tekst-3">
+                    <p id="ov3" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">Opamp-lm339</p>Lorem ipsum dolor sit
+                    amet consectetur, adipisicing elit. Cum repellat praesentium eaque esse modi corporis. Provident,
+                    excepturi, unde quaerat aperiam atque voluptates sunt recusandae rem obcaecati assumenda in, explicabo itaque mollitia
+                    aliquid laborum placeat. Illo fugiat provident id delectus est. Nulla repellat cumque minus sit totam fugit nobis
+                    molestias laboriosam.</p>
+
+                </div>
+            </div>
+    </div>
+            <!------------------------------------------------------Underdetaljer---------------------------------------------------------->
+        
+            <div class="detaljer-container"><!--   Lager container for avsluttende kontaktinformasjonsområde  -->
+                <div class="d-1">Telefon nr: 12345678<br>Adresse: Norge <br> Email: Studenter@email.no</div>
+                <div class="d-2"></div><!--  ikke nødvendige linjer, men brukt for å ta opp plass på sluttlinjen. (kunne brukt "." på stylingsområdet istede)  -->
+                <div class="d-3"></div><!--  ikke nødvendige linjer, men brukt for å ta opp plass på sluttlinjen. (kunne brukt "." på stylingsområdet istede)  -->
+                <div class="d-4">Nettside produsert av: <br> Tarje, Andreas, Tobias</div>
+            </div>
+
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script><!-- Prelaget javascript source for fade effekt    -->
+            <script>
+                AOS.init({
+                    duration: 3000,
+                    once: true,
+                });
+            </script>
+</body>
+
+</html>

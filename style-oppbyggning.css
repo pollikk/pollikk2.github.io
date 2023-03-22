@@ -1,0 +1,275 @@
+/* setter standarverdi på margin og padding */
+* {
+    margin: 0;
+    padding: 0;}
+/* Setter bakgrunnsfarge på innholdet i "body" */
+body{
+        background-color: darkslategray;
+}
+/* Setter standarverdier på knapper i bryterpanel */
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+/* Oppsett av bryterpanel. posisjon settes til sticky for å få bryterpanelet til å følge etter når siden scrolles nedover og oppover */
+.bryterpanel {
+    margin: 0 25px 0 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    top: 0;
+}
+/* Styling av alle knapper på bryterpanelet (satt som button1 for å kunne bruke samme styling på forskjellige sider hvor den er definert som button1 */
+.button1 {
+    margin-left: 20px;
+    display: flex;
+    padding: 2px;
+    width: 150px;
+    justify-content: center;
+    border: solid 2px transparent;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 1s;
+}
+/* Setter hover effekt på alle knapper for å få knappene til å scales opp når de hovres*/
+.button1:hover {
+    transform: scale(1.2);
+    border: solid 2px darkblue;
+}
+    /* OVERSKIRFT */
+    .area1 {
+    background-color: rgb(39, 89, 89);
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        grid-area: area1;
+        min-height: 50px;
+        border: solid 2px black;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }
+/*                                                  BANNER */
+/* Styling av banneren samt sette på bakgrunnsbilde */
+.banner1 {
+    margin: 15px 0x 0 0;
+    display: grid;
+        flex-wrap: wrap;
+        grid-template-areas:
+            ". banner-tekst . ."
+        ;    height: 600px;
+            animation-name: example;/* Setter navn på animasjonen */
+            animation-duration: 30s;/* Setter tid på hvor lang tid den fulstendige animasjonen skal ta */
+            animation-iteration-count: infinite;/* Setter animasjonen til å fortsette uendelig */
+            ;
+        }
+        /* Oppsett av animasjonen brukt til banneren. Her forandres bilde utifra hvor mange prosent animasjonen har komt hvor 30sek er 100%*/
+                @keyframes example {
+                    0% {
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),url(images/gruppebilder/lodding.PNG);
+                        background-position-y: center;
+                                        background-size: auto;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            -o-background-size: cover;
+                                            background-repeat: no-repeat;
+                    }
+        
+                    25% {
+                        background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/gruppebilder/arbeid2.PNG);
+                                        background-size: auto;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            -o-background-size: cover;
+                                            background-repeat: no-repeat;
+                    }
+        
+                    50% {
+                        background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/gruppebilder/arbeid3.PNG);
+                                        background-size: auto;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            -o-background-size: cover;
+                                            background-repeat: no-repeat;
+                    }
+                            /* Trenger flere bilder */
+                    75% {
+                        background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/gruppebilder/arbeid1.PNG);
+                                        background-size: auto;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            -o-background-size: cover;
+                                            background-repeat: no-repeat;
+                    }
+        
+                    100% {
+                        background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/gruppebilder/arbeid4.PNG);
+                                        background-size: auto;
+                                            -webkit-background-size: cover;
+                                            -moz-background-size: cover;
+                                            -o-background-size: cover;
+                                            background-repeat: no-repeat;
+                    }
+                }
+                /* Styling og posisjonering av tekst i banner */
+.banner-tekst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    max-width: 800px;
+    line-height: 1.4;
+    color: white;
+    grid-area: banner-tekst;
+    line-height: 1.4;
+}
+/*                                                        MELLOMSIDE- side2 */
+/* posisjonering av container, satt som grid type for å plassere innhold utifra grid plassering */
+.side2-container{
+    margin: 150px 250px 150px 250px;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    display: grid;
+    border-radius: 15px;
+    grid-template-areas:
+    "tekst-side2 tekst-side2 bilde-side2 bilde-side2"
+    ;
+    height: fit-content;/* Setter høyden til å passe til innholdet */
+}
+.tekst-side2{
+    font-size: 25px;
+    padding: 100px;
+    clear: right;
+    grid-area: tekst-side2;
+}
+/* Setter posisjonering på bilder av medlemmer */
+.bilde-side2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    grid-area: bilde-side2;
+}
+#bilde1-side2{
+    padding: 15px;
+    border-radius: 55px;
+    margin-right: 100px;
+    max-width: 100%;
+    height: auto;
+}
+
+/*                                                    Side bakgrunn 2------------------------------------------- */
+
+.container1 {
+    height: fit-content;
+            background:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/bak1.jpg) no-repeat center center fixed;
+            background-size: auto;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-repeat: no-repeat;
+}
+.container2{
+    margin: 100px;
+    height: fit-content;
+}
+.container4 {
+    margin: 100px;
+    height: fit-content;
+}
+
+/*                                           BILDE og TEKST 1                                    */
+/* Setter padding på overskrift for å få den vekk fra kanter */
+#ov1 {
+    padding-top: 100px;
+    line-height: 1.3;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    clear: left;
+}
+
+#bilde-profil {
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+    border-radius: 175px;
+    float: right;
+}
+
+.tekst-1 {
+    line-height: 1.5;
+    color: white;
+    font-size: 20px;
+    clear: left;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*                                           BILDE og TEKST 2                                    */
+.container3{
+    margin: 100px;
+    height: fit-content;
+}
+#ov2 {
+    line-height: 1.3;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    clear: right;
+}
+
+#bilde-5 {
+    height: 300px;
+    width: 300px;
+    border-radius: 175px;
+    float: left;
+}
+
+.tekst-2 {
+    line-height: 1.5;
+    color: white;
+    font-size: 20px;
+    clear: right;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*                                           BILDE og TEKST 3                                    */
+#ov3 {
+    padding-top: 100px;
+    line-height: 1.3;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    clear: left;
+}
+
+#bilde-profil3 {
+    height: 300px;
+    width: 300px;
+    border-radius: 175px;
+    float: right;
+}
+
+.tekst-3 {
+    padding-bottom: 100px;
+    line-height: 1.5;
+    color: white;
+    font-size: 20px;
+    clear: left;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*                                           HOVEDINNHOLD                                                        */
+
+.container5{
+    margin: 50px;
+    height: 1500px;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}

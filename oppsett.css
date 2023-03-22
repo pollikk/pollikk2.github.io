@@ -1,0 +1,636 @@
+
+/* Setter standard margin og paddin til 0 for hele siden */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Setter bakgrunnsfarge på "body" */
+body {
+background-color: darkslategray;
+}
+/* Setter standardverdier på knappene i bryterpanelet */
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+/* Oppsett av bryterpanel. posisjon settes til sticky for å få bryterpanelet til å følge etter når siden scrolles nedover og oppover */
+.bryterpanel{
+    margin: 0 25px 0 0;
+    position: sticky;
+    display:flex ;
+    flex-direction: row;
+    justify-content: end;
+    top:0;
+}
+/* Setter standardverdier på alle paragrafer */
+p{
+    padding: 100px;
+    font-size: 20px;
+}
+/* Styling av alle knapper på bryterpanelet (satt som button1 for å kunne bruke samme styling på forskjellige sider hvor den er definert som button1 */
+.button1 { 
+    margin-left: 20px;
+    display: flex;
+        padding: 2px;
+        width: 150px;
+        justify-content: center;
+        border: solid 2px transparent;
+        border-radius: 9px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 1s;
+}
+/* Setter hover effekt på alle knapper for å få knappene til å scales opp når de hovres*/
+.button1:hover{
+    transform: scale(1.2);
+    border: solid 2px darkblue;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+    "tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp"
+    "area1 area1 area1 area1 area1"
+    "area2 area2 area2 area2 area2"
+    ;
+}
+/* Tidligere styling av tilbakeknapp brukt under utvikling (kan slettes) */
+.tilbakeKnapp{
+    grid-area: tilbakeKnapp;
+}
+/* styling og posisjonering av overskrift for siden */
+.area1 {
+    background-color: rgb(39, 89, 89);
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    grid-area: area1;
+    min-height: 50px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+/* styling og posisjonering av banner */
+.banner {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url(images/kodeprogresjon/bak1-koding.PNG) no-repeat center center fixed;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-areas:
+        ". overtekst . ."
+        ". navbar . ."
+    ;
+}
+
+/* knapper plassert på banner */
+#li1-1{
+    color: black;
+    padding:5px ;
+    border: solid 2px black;
+    border-radius: 15px;
+    background-color: darkcyan;
+}
+/* hover effekt på knapper i banneren */
+#li1-1:hover{
+    transform: scale(1.3);
+}
+/* posisjonering og størrelse på skrift på brytere */
+.navbar {
+    font-size: 25px;
+    margin: 25px 150px 0 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* posisjonering på ul containeren og listen med brytere */
+.navbar ul li {
+    margin: 0 15px 0 15px;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+/* Setter dekorasjonen til bryterene til none for å få vekk unsigned list dekorasjonen*/
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+/* setter tid på hvor lang tid det tar å lage streken under knappene */
+li{
+    transition: 1s;
+}
+/* Setter hover effekt hvor knappene øker i skriftstørrelse */
+li:hover{
+    font-size: 30px;
+}
+/* lager opp strek som skal komme når knappene hovres */
+.navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: green;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: 0.5s;
+}
+/* setter på hover effekten på knappene hvor streken går fra 0-100% i bredde */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* -----------------------------------------------------Mellomside */
+/* styling av borderen rundt mellomsiden */
+.container-main{
+border-top: solid 2px black;
+border-bottom: solid 2px black;
+}
+/* posisjonering av tekst i mellomsiden */
+.tekst-container{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+/* styling av tekst i mellomsiden */
+#tekst1{
+    margin: 25px 15px 25px 0;
+    color: white;
+    width: 400px;
+    font-size: 20px;
+    grid-area: tekst1;
+}
+/* styling av størrelse på bildene brukt i mellomsiden */
+#bilde1{
+    padding: 30px;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+}
+/*   -------------------------------------          Side 2 */
+/* posisjonering av overskrift over nettside kode progresjonen */
+.innledning-side2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* setter størrelse og padding på overskriften */
+#overskrift-side2{
+    padding-top: 25px;
+    font-size: 30px;
+}
+/* Setter opp container for innholdet for nettside kode og progresjonen */
+.container-s2{
+    margin: 50px 50px 40px 50px;
+    margin-top:50px;
+    margin-bottom: 40px;
+    height: 500px;
+display: grid;
+grid-template-areas:
+"area2-1 area2-2" 
+;
+}
+/*                                  side 2 progresjon kode */
+/* styling av hver av områdene i containeren */
+.area2-1{
+
+    padding-left:170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-1.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area2-2{
+    line-height: 1.5;
+    display: flex;
+    align-items:center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* --------------------------------------------------------- */
+/* ---------------------------------------------side 3 */
+/* copy paste nedover for å få samme layout nedover med nytt bakgrunnsbile */
+.area3-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-2.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area3-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+
+/* Side 3 */
+.area4-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-3.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area4-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* side 4 */
+.area5-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-4.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area5-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* side 6 */
+.area6-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-4.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area6-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* side 7 */
+.area7-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    background-image: url(images/kodeprogresjon/kode-progresjon-5.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area7-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* side 8 */
+.area8-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/kode-progresjon-6.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area8-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+
+/* hardware side 9 */
+.area9-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-1.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area9-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* hardware side 10 */
+.area10-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-2.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area10-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+.area10-1-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-7.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area10-1-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* hardware kode side 11 */
+.area11-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-3.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area11-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* hardware kode side 12 */
+.area12-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-4.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area12-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* hardware kode side 13 */
+.area13-1 {
+    padding-left: 170px;
+    justify-content: center;
+    width: 860px;
+    height: 520px;
+    grid-area: area2-1;
+    border: solid 2px black;
+    background-image: url(images/kodeprogresjon/hardware-5.PNG);
+    background-position-y: center;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area13-2 {
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border: solid 1px black;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    justify-content: center;
+    background-color: white;
+    width: 500px;
+    grid-area: area2-2;
+}
+/* Avstand mellom divs */
+.avstand-linje {
+    /*                                              Avskille fra side 1 til side 2*/
+    margin: 5% 5% 5% 5%;
+    background-color: black;
+    grid-area: area5;
+    min-height: 0.1px;
+    max-height: 14px;
+}
+
+/*-------------------------------------------------------- Detaljer sluttlinje  */
+.detaljer-container {
+    display: grid;
+    min-height: 70px;
+    background-color: rgb(114, 144, 144);
+    grid-template-areas:
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+    ;
+}
+
+.d-1 {
+    display: flex;
+    grid-area: d-1;
+    align-items: end;
+    justify-content: start;
+}
+
+.d-2 {
+    grid-area: d-2;
+}
+
+.d-3 {
+    grid-area: d-3;
+}
+
+.d-4 {
+    margin-right: 15px;
+    display: flex;
+    grid-area: d-4;
+    align-items: end;
+    justify-content: end;
+}

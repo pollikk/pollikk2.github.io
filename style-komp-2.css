@@ -1,0 +1,210 @@
+/* setter margin og padding til 0 som standard for hele siden */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*  Setter bakgrunnsfarge på siden*/
+body{
+background-color: darkslategray;}
+
+/* Setter verdier på alle "a" defineringer */
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+/* Oppsett av bryterpanel. posisjon settes til sticky for å få bryterpanelet til å følge etter når siden scrolles nedover og oppover */
+.bryterpanel {
+    margin: 0 25px 0 0;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    top: 0;
+}
+/* Styling av alle knapper på bryterpanelet (satt som button1 for å kunne bruke samme styling på forskjellige sider hvor den er definert som button1 */
+.button1 {
+    margin-left: 20px;
+    display: flex;
+    padding: 2px;
+    width: 150px;
+    justify-content: center;
+    border: solid 2px transparent;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 1s;
+}
+/* Setter hover effekt på alle knapper for å få knappene til å scales opp når de hovres*/
+.button1:hover {
+    transform: scale(1.2);
+    border: solid 2px darkblue;
+}
+/* Styling av banneren samt sette på bakgrunnsbilde */
+.banner{
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)),url(images/Kretser-bilder/kretser-bak1.jpg) no-repeat center center fixed;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-areas:
+    ". tekst-banner . ."
+    ;
+}
+/* Styling av teksten over banneren */
+.tekst-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    max-width: 800px;
+    line-height: 1.4;
+    color: white;
+    grid-area: tekst-banner;
+}
+/* Setter standarverdier på alt i containeren */
+.container {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* Setter bakgrunnsfarge på hovedinnhold og plassering  */
+.hovedinnhold{
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 75px 0 75px;
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    width: 2500px;
+    min-width: 500px;
+    grid-template-areas:
+    "area1 area1 area1 area1 area1" ;
+}
+/* (area1 brukt som overskrift på de fleste av sidene) Setter på bakgrunnsfarge og styling på overskrift */
+.area1 {
+    background-color: rgb(39, 89, 89);
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    grid-area: area1;
+    min-height: 50px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+/* Setter avstand på area2 containeren */
+.area2-container{
+margin: 100px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+/*                                           BILDE og TEKST 1                                    */
+/* Setter overskriftsstørrelse og fet type skrift */
+#ov1{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Setter størrelse på bilde brukt og runder kantene. Setter bilde til å være plassert på høyre side */
+#bilde-1{
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    float: right;
+}
+/* Setter tekst størrelse */
+.tekst-1{ 
+    font-size: 20px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+/*                                                BILDE og TEKST 2                                    */
+#ov2 {
+    font-size: 25px;
+    font-weight: bold;
+    clear: right;
+}
+
+#bilde-2 {
+
+    margin-top: 100px;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    float: left;
+}
+
+.tekst-2 {
+    margin-top: 250px;
+    font-size: 20px;
+    clear: right;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+    /*                                                BILDE og TEKST 3                                    */
+#ov3 {
+    font-size: 25px;
+    font-weight: bold;
+    clear: left;
+}
+
+#bilde-3 {
+
+    margin-top: 100px;
+        height: 400px;
+        width: 400px;
+        border-radius: 15px;
+        float: right;
+}
+
+.tekst-3 {
+        margin-top: 250px;
+        font-size: 20px;
+        clear: left;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------DETALJER AVSLUTTENDE LINJE-------------------------------------------------*/
+/* Sette detaljer-container til å være en grid og setter plasseringer på innholdet */
+.detaljer-container {
+    display: grid;
+    min-height: 70px;
+    background-color: rgb(114, 144, 144);
+    grid-template-areas:
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+        "d-1 d-2 d-3 d-4"
+    ;
+}
+/* Setter posisjonering på de forskjellige innholdsclassene og setter størrelse på skrift */
+.d-1 {
+    display: flex;
+    grid-area: d-1;
+    align-items: end;
+    justify-content: start;
+}
+
+.d-2 {
+    grid-area: d-2;
+}
+
+.d-3 {
+    grid-area: d-3;
+}
+
+.d-4 {
+    margin-right: 15px;
+    display: flex;
+    grid-area: d-4;
+    align-items: end;
+    justify-content: end;
+}

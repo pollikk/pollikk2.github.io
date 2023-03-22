@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: lightgrey;
+}
+
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.tilbakeKnapp {
+    display: flex;
+    justify-content: end;
+    grid-area: tilbakeKnapp;
+}
+
+.button1 {
+    margin: 15px 15px 0 0;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 9px;
+    height: 25px;
+    width: 100px;
+    font-size: 20px;
+    z-index: 5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button1:hover {
+    background-color: green;
+}
+
+#overskrift {
+    /*overskrift størrelse og spesifikasjoner*/
+    font-size: 55px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp"
+        "area1 area1 area1 area1 area1"
+        "resistans-overskrift . . . dc-overskrift"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area2 area3-container area3-container area3-container area4"
+        "area5 area5 area5 area5 area5"
+    ;
+}
+
+.area1 {
+    /*overskrift posisjonering*/
+    margin: 1% 0 0 0;
+    display: flex;
+    justify-content: center;
+    grid-area: area1;
+}
+
+.resistans-overskrift {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-bottom: solid black 1px;
+    grid-area: resistans-overskrift;
+}
+
+.dc-overskrift {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-bottom: solid black 1px;
+    grid-area: dc-overskrift;
+}
+
+.area2-container {
+    /*Grid oppsett for area2*/
+    margin: 0 0 0 0;
+    display: grid;
+    min-width: 300px;
+    /*setter minimum størrelse på area2 innholdet til 300px*/
+    grid-area: area2;
+    grid-template-areas:
+        "area2-1"
+        "area2-2"
+        "area2-3"
+    ;
+}
+
+.area2-1 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-1;
+    border: solid transparent 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#bilde-skjema-res {
+    position: absolute;
+    height: 20%;
+    max-width: 15%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-skjema-res:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, 10%);
+    z-index: 999;
+}
+
+.area2-2 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-2;
+    border: solid transparent 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#bilde-koblet-res {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-koblet-res:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, -10%);
+}
+
+.area2-3 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area2-3;
+    border: solid transparent 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#bilde-formel-res {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-formel-res:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(50%, -10%);
+}
+
+.area3-container {
+    /*Hovedinnhold container*/
+    margin: 0 5% 0 5%;
+    display: grid;
+    height: fit-content;
+    min-height: 800px;
+    justify-content: center;
+    grid-area: area3-container;
+    background-color: white;
+    border: solid 2px transparent;
+    border-radius: 15px;
+    border: solid 2px black;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.7);
+    grid-template-areas:
+        "area3-1"
+        "area3-2"
+        "area3-2"
+        "area3-2"
+        "area3-2"
+        "area3-2"
+        "area3-2"
+        "area3-3"
+        "area3-4"
+    ;
+}
+
+.area3-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 35px;
+}
+
+.area3-2 {
+    /* set a fixed height */
+    padding: 3%;
+    display: flex;
+    height: fit-content;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#para3-2 {
+    margin-top: -4%;
+    /*Setter innholdstekst nærmere overskrift*/
+    align-items: start;
+    justify-content: start;
+    font-size: 20px;
+    height: fit-content;
+    flex: 1 1 200px;
+}
+
+.area3-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 35px;
+}
+
+.area3-4 {
+    /* set a fixed height */
+    padding: 3%;
+    display: flex;
+    height: fit-content;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#para3-4 {
+    margin-top: -3%;
+    /*Setter innholdstekst nærmere overskrift*/
+    align-items: start;
+    justify-content: start;
+    font-size: 20px;
+    height: fit-content;
+    flex: 1 1 200px;
+
+}
+
+.area4-container {
+    display: grid;
+    min-width: 300px;
+    grid-area: area4;
+    grid-template-areas:
+        "area4-1"
+        "area4-2"
+        "area4-3"
+    ;
+}
+
+.area4-1 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-1;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#bilde-skjema-dc {
+    position: absolute;
+    height: 20%;
+    max-width: 15%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-skjema-dc:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+
+.area4-2 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-2;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#bilde-koblet-dc {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-koblet-dc:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+
+.area4-3 {
+    /*Bilde 1 posisjonering og spesifikasjoner*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: area4-3;
+    border: solid transparent 2px;
+    background-size: cover;
+
+}
+
+#bilde-formel-dc {
+    position: absolute;
+    height: 20%;
+    border: solid transparent 2px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#bilde-formel-dc:hover {
+    /*hover spesifikasjoner*/
+    border-radius: 15px;
+    transform: scale(3) translate(-50%, 10%);
+    z-index: 999;
+}
+
+.area5 {
+    /*                                              Avskille fra side 1 til side 2*/
+    margin: 2% 0 2% 0;
+    background-color: black;
+    grid-area: area5;
+    min-height: 0.1px;
+    max-height: 14px;
+}
+
+/*NESTE SIDE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

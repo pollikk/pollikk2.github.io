@@ -1,0 +1,76 @@
+/*                                                  Setter margin og padding til 0 som standard for hele nettsiden */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*                                          Setter bakgrunnsbilde på forside */
+body{
+        background: url(images/bak2.jpg) no-repeat center center fixed;
+        background-size: auto;
+        -webkit-background-size: cover; /*                      legger til webkit, moz, o for å dekke 
+                                                                forskjellige nettleser slik at "cover" funksjonen skal fungere på forskjellige nettlesere*/
+        -moz-background-size: cover; 
+        -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+/*                                              Container for å dele ut plasseringer for websiden */
+.container {        
+    display: grid;
+    grid-template-areas:
+        "tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp tilbakeKnapp"        
+        "area1 area1 area1 area1 area1 area1"
+        "area-buttons area-buttons area-buttons area-buttons area-buttons area-buttons "
+        "slide-contain slide-contain slide-contain slide-contain slide-contain slide-contain"
+
+    ;
+}
+
+.area-buttons{/*                                posisjonering for område for knapper*/
+    margin: 15px 0 0 0;
+grid-area: area-buttons;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;  
+  align-items: center;
+    justify-content: center;
+}
+
+#button1,#button2,#button3,#button4,#button5 { /*størrelse og posisjonering på alle knapper*/
+    display: flex;
+    margin-left: 25px;
+    margin-right: 35px;
+    padding: 5px;
+    width: 200px;
+    justify-content: center;
+    border: solid 2px transparent;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 1s;
+}
+#button1:hover,#button2:hover,#button3:hover,#button4:hover,#button5:hover { /*hover effekt på alle knapper*/
+        transform: scale(1.4);
+        border: solid 2px darkblue;
+}
+.area1 {
+        margin: 10px 50px 0 50px;
+        min-width: 250px;
+        height: 65px;
+        display: flex;
+        background-color: darkslategray;
+        grid-area: area1;
+        font-size: 30px;
+        align-items: center;
+        justify-content: start;
+        border: solid 2px black;
+        box-shadow: 0px 10px 5px 5px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-kretser.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!-- prelaget javascript fil for fade effekt  -->
+</head>
+
+<body> 
+    <div class="area1"><h1 id="overskrift">Kretsskjemaer</h1></div> <!-- Setter overskrift på siden -->
+            <div class="bryterpanel"> <!-- Setter opp bryterpanel -->
+                <a href="index.html"><span class="button1">Hjem</span></a>
+                <a href="maleinstrument.html"><span class="button1">Måleinstrument</span></a>
+                <a href="Kretser.html"><span class="button1">Kretsskjemaer</span></a>
+                <a href="komponenter-2.html"><span class="button1">Komponenter</span></a>
+                <a href="oppsett.html"><span class="button1">Programmering</span></a>
+                <a href="oppbyggning.html"><span class="button1">Arbeidsprosess</span></a>
+            </div>
+        <div class="banner">area-banner<!--Setter opp en banner hvor bakgrunnsbilde kan plasseres -->
+            <div class="tekst-banner"></div>
+        </div>
+    <div class="container">
+        <div class="resistans-overskrift"><h2><em>Resistans:</em></h2></div><!--Setter opp overskrifter over bilder -->
+        <div class="dc-overskrift"><h2><em>DC-spenning:</em></h2></div><!--Setter opp overskrifter over bilder -->
+        
+            <div class="area2-container"> <!-- Lager container med navn area2-container for plassering av bilder -->
+                <div class="area2-1"><img src="images/resistans-skjema-7.PNG" id="b1-1"></div>
+                <div class="area2-2"><img src="images/komponenter/resistor.PNG" id="b1-2"></div>
+                <div class="area2-3"><img src="images/Kretser-bilder/formel-resistans.PNG" id="b1-3"></div>
+            </div>
+                   <div class="area3-container"><!-- Lager en container for plassering av tekst -->
+                        <div class="area3-1"><em><h2>Resistans</h2></em></div>
+                            <div class="area3-2"><p id="para3-2">På kretsskjemaet til venstre kan du se hvordan resistans måles. For å oppnå så nøyaktige målinger som mulig, er det
+                            valgt å bruke fire referansemotstander med størrelser på 100Ohm, 1KOhm, 10KOhm og 100KOhm. Disse er koblet parallelt før
+                            en motstand som ønskes å måles, som er koblet i serie med referansemotstandene. Koden vil først teste den første
+                            referansemotstanden den ønsker å bruke, og regne ut spenningen over referansemotstanden med motstanden som skal måles.
+                            Hvis målingen ikke gir ønsket verdi, vil koden prøve neste referansemotstand.
+                            </p>
+                            </div>
+                        <div class="area3-3"><em><h2>DC-spenning</h2></em></div>
+                        <div class="area3-4"><p id="para3-4">På høyre side ser man kretsskjemaet for å måle DC-spenning. Det er en spenningsdelerkrets med to motstander som er koblet på
+                        samme måte som ved resistansmåling. Først beregner koden den totale motstanden i spenningsdelerkretsen ved å bruke
+                        spenningen som mates inn. Deretter blir den målte spenningen gjennomsnittsberegnet ved å kjøre gjennom en løkke 20
+                        ganger. Koden beregner så den faktiske spenningen ved å dele på den totale motstanden. Hvis den faktiske spenningen er
+                        større enn 0,05V, vil programmet kjøre gjennom koden for spenningsmåling hvor det vil legge til 1,25V. Dette gjøres for
+                        å kompensere for spenningstapet over dioden og tyristoren som vil bli implementert i sluttproduktet. Dioden er ikke
+                        inkludert i dette kretsskjemaet for å unngå blanding av kretser.
+                        </p></div>
+                   </div>
+        <div class="area4-container"><!-- lager container for plassering av bilder på høyre side -->
+                <div class="area4-1"><img src="images/dc-spenning.PNG" id="b2-1"></div>
+                <div class="area4-2"><img src="images/komponenter/dc-spenning.PNG" id="b2-2"></div>
+                <div class="area4-3"><img src="images/Kretser-bilder/formel-dc-spenning.PNG" id="b2-3"></div>
+        </div>  
+              <div class="area5"></div>
+    </div>     
+                            <!------------------------------------------------------SIDE 2---------------------------------------------------------->
+    <div class="container">
+        <div class="resistans-overskrift"><h2><em>Kontinuitet:</em></h2></div>
+        <div class="dc-overskrift"><h2><em>Diode:</em></h2></div>
+            <div class="area2-container">
+                <div class="area2-1"><img src="images/Kretser-bilder/busser-skjema.PNG" id="b1-1"></div>
+                <div class="area2-2"><img src="images/komponenter/buzzer.PNG" id="b1-2"></div>
+                <div class="area2-3"><img src="images/Kretser-bilder/kontinuitet.PNG" id="b1-3"></div>
+            </div>
+                   <div class="area3-container"data-aos="fade-up" data-aos-duration="1500" data-aos-once="false">
+                        <div class="area3-1"><em><h2>Kontinuitetssensor</h2></em></div>
+                            <div class="area3-2"><p id="para3-2">Kontinuitetssensoren er en piezo passiv summer som brukes til å generere lyd. Passive summer gir brukeren mulighet til å
+                            kontrollere tonen eller tonehøyden som produseres av summeren, noe som er en fordel i forhold til aktive summer. For å
+                            produsere lyd, trenger passive summer et firkantbølgesignal, og ved å endre frekvensen til firkantbølgen kan brukeren
+                            endre tonehøyden til lyden. I Arduino kan man bruke en innebygd funksjon kalt "tone()", som bruker puls-bredde
+                            modulasjon for å generere firkantbølger ved ulike frekvenser. "tone()" funksjonen krever tre parametere: pin-nummeret
+                            hvor firkantbølgen skal sendes til, frekvensen til tonen i hertz og varigheten av tonen i millisekunder.
+                            </p>
+                            </div>
+                        <div class="area3-3"><em><h2>Diodemåling</h2></em></div>
+                        <div class="area3-4"><p id="para3-4">Til høyre vises et kretsskjema for å måle dioder ved hjelp av samme metode som ved resistansmåling. Referansemotstand 2
+                        er valgt for å måle dioder på grunn av Arduino-utgangene. Kretsskjemaet viser en referansemotstand koblet i serie med
+                        dioden som skal måles. Dioden er plassert på en måte som er i tråd med matematiske prinsipper, som sier at spenningen
+                        fordeler seg mellom komponenter som er koblet i serie.
+                        </p></div>
+                   </div>
+        <div class="area4-container">
+                <div class="area4-1"><img src="images/dc-spenning.PNG" id="b2-1"></div>
+                <div class="area4-2"><img src="images/komponenter/diode.PNG" id="b2-2"></div>
+                <div class="area4-3"><img src="images/Kretser-bilder/Diode.PNG" id="b2-3"></div>
+        </div>  
+              <div class="area5"></div>
+    </div>
+                            <!------------------------------------------------------SIDE 3---------------------------------------------------------->
+    <div class="container">
+        <div class="resistans-overskrift"><h2><em>Kapasitans:</em></h2></div>
+        <div class="dc-overskrift"><h2><em>Induktans:</em></h2></div>
+            <div class="area2-container">
+                <div class="area2-1"><img src="images/Kretser-bilder/kondensator-skjema.PNG" id="b1-1"></div>
+                <div class="area2-2"><img src="images/komponenter/kondensator.PNG" id="b1-2"></div>
+                <div class="area2-3"><img src="images/Kretser-bilder/kapasitans.PNG" id="b1-3"></div>
+            </div>
+                   <div class="area3-container"data-aos="fade-up" data-aos-duration="1500" data-aos-once="false">
+                        <div class="area3-1"><em><h2>Kapasitans</h2></em></div>
+                            <div class="area3-2"><p id="para3-2">Kretsskjemaet til venstre viser hvordan man kan måle kapasitans. Det brukes to motstander som styrer oppladingen og
+                            utladningen av kondensatoren. Koden sørger for å lade opp kondensatoren og måler tiden det tar for spenningen over den å
+                            nå en bestemt verdi. Ved hjelp av denne tiden og verdien av en av motstandene, kan man beregne kapasiteten til
+                            kondensatoren.
+                            </p>
+                            </div>
+                        <div class="area3-3"><em><h2>Induktans</h2></em></div>
+                        <div class="area3-4"><p id="para3-4">På høyre side er kretsskjemaet for induktans. her brukers det en LC-krets, som består av en induktor og en kondensator, for å måle induktansen til en
+                        ukjent induktor. LC-kretsen fungerer som et resonanskretssystem, og resonansfrekvensen til systemet avhenger av både
+                        verdien til induktansen og kapasitansen.
+                        <br>
+                        <br>
+                        For å måle induktansen sender koden en kort puls av høy spenning til LC-kretsen, som lader opp den ukjente induktoren i
+                        en kort periode. Deretter sender koden en kort puls av lav spenning og måler tiden det tar for kretsen å resonere.
+                        Basert på denne tiden kan koden beregne resonansfrekvensen til LC-kretsen. Ved å bruke en fastsatt verdi for
+                        kapasitansen kan koden beregne verdien for induktansen.
+                        <br>
+                        <br>
+                        For å beregne resonansfrekvensen deler koden pulstiden med 2 for å finne perioden til resonanskurven, og deretter
+                        dividerer med 1.000.000 for å konvertere fra mikrosekunder til sekunder. Deretter kan koden beregne verdien til
+                        induktansen ved å bruke den beregnede resonansfrekvensen og den fastsatte verdien for kapasitansen.
+                        </p></div>
+                   </div>
+        <div class="area4-container">
+                <div class="area4-1"><img src="images/Kretser-bilder/induktans-skjema.PNG" id="b2-1"></div>
+                <div class="area4-2"><img src="images/komponenter/spole.PNG" id="b2-2"></div>
+                <div class="area4-3"><img src="images/Kretser-bilder/induktans.PNG" id="b2-3"></div>
+        </div>  
+              <div class="area5"></div>
+    </div>
+    <!------------------------------------------------------SIDE 3---------------------------------------------------------->
+        <div class="container">
+            <div class="resistans-overskrift">
+                <h2><em>Temperatur:</em></h2>
+            </div>
+            <div class="dc-overskrift">
+                <h2><em>DC-spenning:</em></h2>
+            </div>
+            <div class="area2-container">
+                <div class="area2-1"><img src="images/Kretser-bilder/termistor-skjema.PNG" id="b1-1"></div>
+                <div class="area2-2"><img src="images/komponenter/termistor.PNG" id="b1-2"></div>
+                <div class="area2-3"><img src="images/Kretser-bilder/termistor.PNG" id="b1-3"></div>
+            </div>
+            <div class="area3-container"data-aos="fade-up" data-aos-duration="1500" data-aos-once="false">
+                <div class="area3-1"><em>
+                        <h2>Temperatur</h2>
+                    </em></div>
+                <div class="area3-2">
+                    <p id="para3-2">This circuit diagram shows the setup for a temperature sensor that uses an NPN thermistor and a resistor. The circuit
+                    uses the Steinhart-Hart equation to calculate the temperature in Kelvin, which can then be converted to Celsius by
+                    subtracting 273.15. To find the values for the constants A, B, and C in the Steinhart-Hart equation, one can use a table
+                    found in the datasheet for the thermistor and then use a thermistor calculator that is available online. See the
+                    attachment for the information that has been entered into the calculation.
+                    </p>
+                </div>
+                <div class="area3-3"><em>
+                        <h2>Area 3-3</h2>
+                    </em></div>
+                <div class="area3-4">
+                    <p id="para3-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit commodi recusandae at
+                        dolorem odit perferendis repellendus tempora sit? Eaque maxime saepe dolorem, provident quibusdam
+                        dignissimos repellat voluptatum enim nisi laudantium ipsam tempora nulla iusto pariatur! Unde non sunt
+                        tenetur, sint alias illo iusto distinctio dolore perspiciatis quia. Dolore aliquam atque, quia magnam,
+                        nemo voluptas qui ratione aspernatur architecto quisquam corporis dolores. Ut dignissimos ratione
+                        eveniet laboriosam numquam nobis? Deserunt alias eos deleniti perspiciatis architecto omnis rem, odit
+                        consectetur. Assumenda quasi aut itaque exercitationem autem? Quia necessitatibus ab, recusandae nisi
+                        autem natus eius omnis nulla corporis beatae quibusdam magni expedita impedit inventore alias
+                        consectetur eligendi voluptas consequuntur facilis ipsam nemo animi quisquam ratione totam. Possimus,
+                        dolor obcaecati. Quis nostrum et, cupiditate omnis blanditiis repellat sit veritatis adipisci eligendi
+                        inventore, laborum consectetur deleniti enim. Temporibus ipsum, et repellat assumenda nobis quam, hic
+                        dicta nemo qui accusamus, corporis soluta sint totam vitae velit facilis inventore magnam
+                        necessitatibus. Error sunt soluta voluptatibus a impedit eaque ut exercitationem qui quae, aliquid
+                        delectus quaerat reiciendis deserunt pariatur iusto omnis sint incidunt eos fugiat. Incidunt esse
+                        doloribus non quisquam similique minima, rem odit! Maiores, natus dolore! Iusto asperiores quia
+                        consequatur! Obcaecati natus excepturi quasi in temporibus!
+                    </p>
+                </div>
+            </div>
+            <div class="area4-container">
+                <div class="area4-1"><img src="images/dc-spenning.PNG" id="b2-1"></div>
+                <div class="area4-2"><img src="images/dc-spenning-koblet.PNG" id="b2-2"></div>
+                <div class="area4-3"><img src="images/bilde5.jpg" id="b2-3"></div>
+            </div>
+            <div class="area5"></div>
+        </div>
+        <!------------------------------------------------------underdetaljer---------------------------------------------------------->
+        <div class="detaljer-container"><!-- Avsluttende linje med kontaktinformasjon -->
+            <div class="d-1">Telefon nr: 12345678<br>Adresse: Norge <br> Email: Studenter@email.no</div>
+            <div class="d-2"></div>
+            <div class="d-3"></div>
+            <div class="d-4">Nettside produsert av: <br> Tarje, Andreas, Tobias</div>
+        </div>
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script><!--  prelaget javascript fil for fade effekt-->
+                <script>
+                    AOS.init({
+                        duration: 3000,
+                        once: true,
+                    });
+                </script>
+</body>
+</html>
